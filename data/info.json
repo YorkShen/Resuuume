@@ -1,0 +1,40 @@
+{
+  "name": "申远",
+  "title": "Android工程师",
+  "skills": [
+    {
+      "name": "Android",
+      "score": "80%"
+    },
+    {
+      "name": "HTML",
+      "score": "70%"
+    },
+    {
+      "name": "CSS",
+      "score": "60%"
+    },
+    {
+      "name": "JavaScript",
+      "score": "40%"
+    },
+    {
+      "name": "CUDA",
+      "score": "65%"
+    }
+  ],
+  "communication": {
+    "tel": {
+      "icon": "tel.svg",
+      "info": "18668166926"
+    },
+    "email": {
+      "icon": "email.svg",
+      "info": "shenyuancs@gmail.com"
+    },
+    "github": {
+      "icon": "github.svg",
+      "info": "github.com/YorkShen"
+    }
+  }
+}

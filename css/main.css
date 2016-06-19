@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", "Source Han Sans CN", "arial", "sans-serif";
+    font-weight: 400;
+    color: white;
+    font-size: 1.5625vw;
+}
+
+.left, .container {
+    padding: 9.375% 3.125%;
+    height: 141.5vw;
+}
+
+.left {
+    width: 37.5%;
+    background-color: #3e3e3e;
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    width: 62.5%;
+    background-color: white;
+}
+

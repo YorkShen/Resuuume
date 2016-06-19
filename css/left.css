@@ -1,0 +1,50 @@
+#name_title {
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+#name {
+    font-weight: 700;
+    font-size: 6em;
+}
+
+#title {
+    font-size: 3em;
+}
+
+#skills {
+    flex-grow: 4;
+}
+
+.skill-row, .communication-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-name {
+    font-weight: 300;
+    line-height: 2em;
+    font-size: 1.5em;
+}
+
+.skill-score {
+    width: 19.53125vw;
+    height: 1.5625vw;
+}
+
+.communication-row {
+    justify-content: flex-start;
+}
+
+.communication-icon {
+    width: 3.4179688vw;
+    height: 3.4179688vw;
+}
+
+.communication-text {
+    margin-left: 1.5625vw;
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 2em;
+}
