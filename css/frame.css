@@ -14,7 +14,7 @@
 }
 
 #left, #content {
-    padding: 9.375% 3.125%;
+    padding: 9.375vw 3.125vw;
     height: 141.5vw;
     word-break: break-all;
     display: flex;
