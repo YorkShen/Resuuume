@@ -3,26 +3,34 @@
     margin: 0;
     font-family: "Helvetica Neue", "Source Han Sans CN", "arial", "sans-serif";
     font-weight: 400;
-    color: white;
     font-size: 1.5625vw;
+    box-sizing: border-box
 }
 
-.left, .container {
+#frame {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#left, #content {
     padding: 9.375% 3.125%;
     height: 141.5vw;
-}
-
-.left {
-    width: 37.5%;
-    background-color: #3e3e3e;
     word-break: break-all;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.content {
-    width: 62.5%;
+#left {
+    color: white;
+    flex-basis: 37.5%;
+    background-color: #3e3e3e;
+}
+
+#content {
+    color: black;
+    flex-basis: 62.5%;
     background-color: white;
 }
 

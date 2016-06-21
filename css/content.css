@@ -1,0 +1,29 @@
+.main_title {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.sub_title {
+    font-size: 2.25em;
+    font-weight: 500;
+    color: black;
+    vertical-align: -1.5em;
+}
+
+.hint {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.main_text {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.item{
+
+}
+
+.main_title + .item .sub_title{
+    vertical-align: baseline;
+}
