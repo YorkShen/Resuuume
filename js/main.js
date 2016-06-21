@@ -30,31 +30,32 @@ function init() {
                     }
                 };
                 mark_xhr.send();
+                loadsvg(result.communication);
                 document.getElementById("name").innerHTML = result.name;
                 document.getElementById("title").innerHTML = result.title;
 
-                for (item in result.communication){
-                    loadsvg("../res/"+result.communication[item].icon,result.communication[item].info,"")
-                }
-                function loadsvg(url,text,index){
-                    var icon_xhr= new XMLHttpRequest();
-                    icon_xhr.open("GET",url);
-                    icon_xhr.onload=function(){
-                        if(icon_xhr.status==200){
-                            var communication_row=document.createElement("div");
-                            var communication_text=document.createElement("div");
-                            var communication_icon=icon_xhr.responseXML.documentElement;
-                            communication_text.innerHTML=text;
-                            communication_text.className="communication-text";
-                            communication_icon.className.baseVal="communication-icon";
-                            communication_row.classList="communication-row";
-                            communication_row.appendChild(communication_icon);
-                            communication_row.appendChild(communication_text);
-                            document.getElementById("communications").appendChild(communication_row);
 
-                        }
-                    };
-                    icon_xhr.send();
+                function loadsvg(communication){
+                    if(communication.length>0) {
+                        var icon_xhr = new XMLHttpRequest();
+                        icon_xhr.open("GET", "../res/"+communication[0].icon);
+                        icon_xhr.onload = function () {
+                            if (icon_xhr.status == 200) {
+                                var communication_row = document.createElement("div");
+                                var communication_text = document.createElement("div");
+                                var communication_icon = icon_xhr.responseXML.documentElement;
+                                communication_text.innerHTML = communication[0].info;
+                                communication_text.className = "communication-text";
+                                communication_icon.className.baseVal = "communication-icon";
+                                communication_row.classList = "communication-row";
+                                communication_row.appendChild(communication_icon);
+                                communication_row.appendChild(communication_text);
+                                document.getElementById("communications").appendChild(communication_row);
+                                loadsvg(communication.slice(1,communication.length));
+                            }
+                        };
+                        icon_xhr.send();
+                    }
                 }
             }
         };

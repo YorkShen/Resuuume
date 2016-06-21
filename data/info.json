@@ -23,18 +23,18 @@
       "score": "65%"
     }
   ],
-  "communication": {
-    "tel": {
+  "communication": [
+    {
       "icon": "tel.svg",
       "info": "18668166926"
     },
-    "email": {
+    {
       "icon": "email.svg",
       "info": "shenyuancs@gmail.com"
     },
-    "github": {
+    {
       "icon": "github.svg",
       "info": "github.com/YorkShen"
     }
-  }
+  ]
 }
