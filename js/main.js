@@ -67,8 +67,9 @@ function load_skill(mark_xhr, skills) {
     };
 }
 
+
 function load_content(biography) {
-    var i, j, k;
+    var i, j;
     for (i = 0; i < biography.length; i++) {
         var section_div = document.createElement("div");
         var main_title = document.createElement("div");
@@ -76,32 +77,41 @@ function load_content(biography) {
         main_title.className = "main_title";
         section_div.appendChild(main_title);
         for (j = 0; j < biography[i].content.length; j++) {
-            var item = document.createElement("div");
-            var sub_title = document.createElement("a");
-            sub_title.innerHTML = biography[i].content[j].sub_title;
-            sub_title.classList.add("sub_title");
-            if (biography[i].content[j].link) {
-                sub_title.setAttribute("href", biography[i].content[j].link);
-            }
-            item.className="item";
-            item.appendChild(sub_title);
-            for (k = 0; k < biography[i].content[j].items.length; k++) {
-                if(biography[i].content[j].items[k].duration) {
-                    var duration = document.createElement("div");
-                    duration.className = "hint";
-                    duration.innerHTML = biography[i].content[j].items[k].duration;
-                    item.appendChild(duration);
-                }
-                if(biography[i].content[j].items[k].description){
-                    var description=document.createElement("div");
-                    description.className="main_text";
-                    description.innerHTML=biography[i].content[j].items[k].description;
-                    item.appendChild(description);
-                }
-            }
-            section_div.appendChild(item);
+            create_item(biography[i].content[j],section_div);
         }
         document.getElementById("content").appendChild(section_div);
+    }
+}
+
+function create_item(content,section_div) {
+    var item = document.createElement("div");
+    var sub_title = document.createElement("a");
+    sub_title.innerHTML = content.sub_title;
+    sub_title.classList.add("sub_title");
+    if (content.link) {
+        sub_title.setAttribute("href", content.link);
+    }
+    item.className = "item";
+    item.appendChild(sub_title);
+    var k;
+    for (k = 0; k < content.items.length; k++) {
+        create_content(content.items[k], item);
+    }
+    section_div.appendChild(item);
+}
+
+function create_content(content, item) {
+    if (content.duration) {
+        var duration = document.createElement("div");
+        duration.className = "hint";
+        duration.innerHTML = content.duration;
+        item.appendChild(duration);
+    }
+    if (content.description) {
+        var description = document.createElement("div");
+        description.className = "main_text";
+        description.innerHTML = content.description;
+        item.appendChild(description);
     }
 }
 
