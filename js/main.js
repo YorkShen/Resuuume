@@ -29,10 +29,13 @@ function load_svg(communication) {
         icon_xhr.onload = function () {
             if (icon_xhr.status == 200) {
                 var communication_row = document.createElement("div");
-                var communication_text = document.createElement("div");
+                var communication_text = document.createElement("a");
                 var communication_icon = icon_xhr.responseXML.documentElement;
                 communication_text.innerHTML = communication[0].info;
                 communication_text.className = "communication-text";
+                if(communication[0].link){
+                    communication_text.setAttribute("href",communication[0].link);
+                }
                 communication_icon.className.baseVal = "communication-icon";
                 communication_row.className = "communication-row";
                 communication_row.appendChild(communication_icon);
