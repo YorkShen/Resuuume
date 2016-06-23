@@ -98,24 +98,27 @@ function create_item(content,section_div) {
     item.appendChild(sub_title);
     var k;
     for (k = 0; k < content.items.length; k++) {
-        create_content(content.items[k], item);
+        create_sub_item(content.items[k], item);
     }
     section_div.appendChild(item);
 }
 
-function create_content(content, item) {
+function create_sub_item(content, item) {
+    var sub_item=document.createElement("div");
+    sub_item.className="sub_item";
     if (content.duration) {
         var duration = document.createElement("div");
         duration.className = "hint";
         duration.innerHTML = content.duration;
-        item.appendChild(duration);
+        sub_item.appendChild(duration);
     }
     if (content.description) {
         var description = document.createElement("div");
         description.className = "main_text";
         description.innerHTML = content.description;
-        item.appendChild(description);
+        sub_item.appendChild(description);
     }
+    item.appendChild(sub_item);
 }
 
 

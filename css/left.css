@@ -17,10 +17,19 @@
     flex-grow: 4;
 }
 
-.skill-row, .communication-row {
+.skill-row{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    padding-top: 1.171875vw;
+    padding-bottom: 1.171875vw;
+}
+
+.skill-row:first-child{
+    padding-top: 0;
+}
+
+.skill-row:last-child{
+    padding-bottom: 0;
 }
 
 .skill-name {
@@ -35,7 +44,9 @@
 }
 
 .communication-row {
+    display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .communication-icon {
@@ -44,7 +55,7 @@
 }
 
 .communication-text {
-    color: white;
+    color: #bbbbbb;
     margin-left: 1.5625vw;
     font-size: 1.5em;
     font-weight: 300;

@@ -27,3 +27,16 @@
 .main_title + .item .sub_title{
     vertical-align: baseline;
 }
+
+.sub_item{
+    padding-top: 0.7815vw;
+    padding-bottom: 0.7815vw;
+}
+
+.sub_title + .sub_item{
+    padding-top: 0;
+}
+
+.sub_item:last-child{
+    padding-bottom: 0;
+}
