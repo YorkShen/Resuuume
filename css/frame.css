@@ -34,3 +34,8 @@
     background-color: white;
 }
 
+@media only print {
+    a {
+        text-decoration: none;
+    }
+}
