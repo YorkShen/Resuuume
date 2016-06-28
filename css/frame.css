@@ -15,7 +15,6 @@
 
 #left, #content {
     padding: 9.375vw 3.125vw;
-    height: 141.5vw;
     word-break: break-all;
     display: flex;
     flex-direction: column;
@@ -37,5 +36,8 @@
 @media only print {
     a {
         text-decoration: none;
+    }
+    #left, #content {
+        height: 141.5vw;
     }
 }
