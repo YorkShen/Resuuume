@@ -5,11 +5,11 @@
 
 #name {
     font-weight: 700;
-    font-size: 6em;
+    font-size: 6rem;
 }
 
 #title {
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 500;
 }
 
@@ -35,7 +35,7 @@
 .skill-name {
     font-weight: 300;
     line-height: 2em;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .skill-score {
@@ -57,7 +57,7 @@
 .communication-text {
     color: #bbbbbb;
     margin-left: 1.5625vw;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 2em;
 }

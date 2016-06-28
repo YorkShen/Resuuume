@@ -1,22 +1,22 @@
 .main_title {
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 600;
 }
 
 .sub_title {
-    font-size: 2.25em;
+    font-size: 2.25rem;
     font-weight: 500;
     color: black;
     vertical-align: -1.5em;
 }
 
 .hint {
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 300;
 }
 
 .main_text {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
