@@ -46,10 +46,11 @@
 .communication-row {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
 }
 
 .communication-icon {
+    transform: translate(0,25%);
     width: 3.4179688vw;
     height: 3.4179688vw;
 }
