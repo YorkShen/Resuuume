@@ -1,25 +1,44 @@
 /**
  * Created by sy on 16/6/14.
  */
+init();
+
 function init() {
     document.addEventListener('DOMContentLoaded', function () {
-        var json_xhr = new XMLHttpRequest();
-        json_xhr.open("GET", "../data/info.json", true);
-        json_xhr.onload = function () {
-            if (json_xhr.status == 200) {
-                var result = JSON.parse(json_xhr.responseText);
-                var mark_xhr = new XMLHttpRequest();
-                mark_xhr.open("GET", "../res/mark.svg", true);
-                mark_xhr.onload = load_skill(mark_xhr, result.skills);
-                mark_xhr.send();
-                load_svg(result.communication);
-                document.getElementById("name").innerHTML = result.name;
-                document.getElementById("title").innerHTML = result.title;
-                load_content(result.biography);
-            }
-        };
-        json_xhr.send();
+        fetch_info();
+        set_min_viewport();
     });
+}
+
+function fetch_info() {
+    var json_xhr = new XMLHttpRequest();
+    json_xhr.open("GET", "../data/info.json", true);
+    json_xhr.onload = function () {
+        if (json_xhr.status == 200) {
+            var result = JSON.parse(json_xhr.responseText);
+            var mark_xhr = new XMLHttpRequest();
+            mark_xhr.open("GET", "../res/mark.svg", true);
+            mark_xhr.onload = load_skill(mark_xhr, result.skills);
+            mark_xhr.send();
+            load_svg(result.communication);
+            document.getElementById("name").innerHTML = result.name;
+            document.getElementById("title").innerHTML = result.title;
+            load_content(result.biography);
+        }
+    };
+    json_xhr.send();
+}
+
+function set_min_viewport() {
+    window.onload = function () {
+        var vp = document.getElementById("vp");
+        if (screen.width < 320) {
+            vp.setAttribute("content", "width=320, initial-scale=1");
+        }
+        else {
+            vp.setAttribute("content", "width=device-width, initial-scale=1");
+        }
+    };
 }
 
 function load_svg(communication) {
@@ -120,7 +139,3 @@ function create_sub_item(content, item) {
     }
     item.appendChild(sub_item);
 }
-
-
-init();
-
