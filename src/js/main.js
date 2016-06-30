@@ -12,7 +12,7 @@ function init() {
 
 function fetch_info() {
     var json_xhr = new XMLHttpRequest();
-    json_xhr.open("GET", "../data/info.json", true);
+    json_xhr.open("GET", "../data/resume.json", true);
     json_xhr.onload = function () {
         if (json_xhr.status == 200) {
             var result = JSON.parse(json_xhr.responseText);
