@@ -1,7 +1,7 @@
 {
   "name": "Resuuume",
   "version": "1.0.0",
-  "description": "",
+  "description": "Resume generator that reads data from json and generates a web site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,11 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/YorkShen/Resuuume.git"
   },
-  "keywords": [],
-  "author": "YorkShen",
+  "keywords": [
+    "resume"
+  ],
+  "author": "YorkShen <shenyuancs@gmail.com> (http://yorkshen.github.io/)",
   "license": "Apache",
   "bugs": {
     "url": "https://github.com/YorkShen/Resuuume/issues"
   },
-  "homepage": "https://github.com/YorkShen/Resuuume#readme"
+  "homepage": "https://github.com/YorkShen/Resuuume#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
