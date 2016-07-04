@@ -98,6 +98,7 @@ function load_content(biography) {
         main_title.innerHTML = biography[i].title;
         main_title.className = "main_title";
         section_div.appendChild(main_title);
+        section_div.classList.add("section");
         for (j = 0; j < biography[i].content.length; j++) {
             create_item(biography[i].content[j],section_div);
         }
