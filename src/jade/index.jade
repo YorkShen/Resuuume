@@ -1,15 +1,17 @@
 doctype html
 html(lang="zh")
     head
-        meta(charset="UTF-8")
+        meta(charset='UTF-8')
         meta#vp(
-        name="viewport"
-        content="width=device-width, initial-scale=1")
+        name='viewport'
+        content='width=device-width, initial-scale=1')
         title Resume
         style
             include ../css/frame.css
             include ../css/left.css
             include ../css/content.css
+        script
+            include ../js/main.js
     body
         #frame
             #left
@@ -20,12 +22,12 @@ html(lang="zh")
                     each skill in skills
                         .skill-row
                             .skill-name=skill.name
-                            - mark.getElementById("score").setAttribute("width",skill.score);
-                            - mark.documentElement.setAttribute('class',"skill-score");
+                            - mark.getElementById('score').setAttribute('width', skill.score);
+                            - mark.documentElement.setAttribute('class','skill-score');
                             div!=mark
                 #communications
                     each comm in communication
-                        -var icon=fs.readFileSync("src/res/"+comm.icon)
+                        -var icon=fs.readFileSync('src/res/'+comm.icon)
                         .communication-row
                             .communication-icon!=icon
                             a.communication-text(href=comm.link)=comm.info

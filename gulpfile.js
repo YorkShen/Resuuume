@@ -8,30 +8,32 @@ var DOMParser = require('xmldom').DOMParser;
 gulp.task('jade', function () {
     gulp.src('src/jade/index.jade')
         .pipe(data(function () {
-            return JSON.parse(fs.readFileSync('src/data/resume.json'))
+            return JSON.parse(fs.readFileSync('resume.json'))
         })).pipe(data(function () {
             var mark=new DOMParser().parseFromString(fs.readFileSync('src/res/mark.svg').toString(),'text/xml');
             return {"fs":fs,
                     "mark":mark}
-        }))
-        .pipe(jade()).pipe(gulp.dest('dist'))
-});
-
-gulp.task('build', function () {
-
+        })).pipe(jade()).pipe(gulp.dest('dist'))
 });
 
 gulp.task('serve', function () {
     browserSync.init({
         server: {
-            baseDir: 'src',
-            index: "html/index.html"
+            baseDir: 'dist',
+            index: "index.html"
         }
     })
 });
 
+gulp.task('build', ['jade'], function () {
+
+});
+
+
+
 gulp.task('server', ['build', 'serve'], function () {
-    gulp.watch('src/**/*.*', function () {
+    gulp.watch(['src/**/*.+(jade|html|js|css|svg)','resume.json'],['jade']);
+    gulp.watch('dist/**/*.*', function () {
         browserSync.reload();
     });
 });
