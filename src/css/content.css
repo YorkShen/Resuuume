@@ -1,3 +1,7 @@
+.section{
+    margin-top: 6rem;
+}
+
 .main_title {
     font-size: 3rem;
     font-weight: 600;
@@ -20,10 +24,6 @@
     font-weight: 400;
 }
 
-.item{
-
-}
-
 .main_title + .item .sub_title{
     vertical-align: baseline;
 }
@@ -39,4 +39,8 @@
 
 .sub_item:last-child{
     padding-bottom: 0;
+}
+
+.section:first-child{
+    margin-top: 0;
 }
