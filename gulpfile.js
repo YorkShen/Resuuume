@@ -45,14 +45,14 @@ gulp.task('min-images', function () {
 });
 
 gulp.task('build', function () {
-    return runSequence('min-images','jade', 'minify');
+    return runSequence('min-images', 'jade', 'minify');
 });
 
-gulp.task('clean-build', function () {
+gulp.task('full-build', function () {
     return runSequence('clean', 'build')
 });
 
-gulp.task('default', ['clean-build']);
+gulp.task('default', ['full-build']);
 
 gulp.task('serve', function () {
     return browserSync.init({
@@ -63,7 +63,7 @@ gulp.task('serve', function () {
     })
 });
 
-gulp.task('server', ['clean-build', 'serve'], function () {
+gulp.task('server', ['full-build', 'serve'], function () {
     gulp.watch(['src/**/*.+(jade|js|css|svg)', 'resume.json'], ['build']);
     gulp.watch('dist/**/*.*', function () {
         browserSync.reload();
