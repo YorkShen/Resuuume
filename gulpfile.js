@@ -33,7 +33,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('server', ['build', 'serve'], function () {
-    gulp.watch(['src/**/*.+(jade|html|js|css|svg)','resume.json'],['jade']);
+    gulp.watch(['src/**/*.+(jade|js|css|svg)','resume.json'],['jade']);
     gulp.watch('dist/**/*.*', function () {
         browserSync.reload();
     });
