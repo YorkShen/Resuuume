@@ -27,7 +27,7 @@ html(lang="zh")
                             div!=mark
                 #communications
                     each comm in communication
-                        -var icon=fs.readFileSync('src/res/'+comm.icon)
+                        -var icon=fs.readFileSync('dist/res/'+comm.icon)
                         .communication-row
                             .communication-icon!=icon
                             a.communication-text(href=comm.link)=comm.info

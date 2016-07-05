@@ -24,13 +24,11 @@
     "del": "^2.2.1",
     "fs": "0.0.2",
     "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.5",
     "gulp-data": "^1.2.1",
     "gulp-htmlmin": "^2.0.0",
-    "gulp-if": "^2.0.1",
-    "gulp-imagemin": "^3.0.1",
     "gulp-jade": "^1.1.0",
     "gulp-minify-inline": "^0.2.1",
+    "gulp-svgmin": "^1.2.2",
     "run-sequence": "^1.2.2",
     "xmldom": "^0.1.22"
   }
