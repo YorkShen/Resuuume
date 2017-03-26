@@ -21,6 +21,10 @@
     {
       "name": "CUDA",
       "score": "65%"
+    },
+    {
+      "name": "Python",
+      "score": "60%"
     }
   ],
   "communication": [
