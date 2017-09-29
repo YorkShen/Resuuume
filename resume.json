@@ -48,7 +48,7 @@
           "items": [
             {
               "duration": "2013.10-2014.06",
-              "description": "开发了拇指阅读Android客户端"
+              "description": "开发拇指阅读Android客户端"
             }
           ]
         },
@@ -56,12 +56,15 @@
           "sub_title": "阿里巴巴",
           "items": [
             {
+              "product": "WindVane",
               "duration": "2015.06-2015.11",
-              "description": "参与WindVane Android SDK的开发"
+              "description": "Develop WindVane Android"
             },
             {
+              "product": "Weex",
               "duration": "2016.01-至今",
-              "description": "参与Weex Android SDK的开发"
+              "description": "Committer & Core Developer of Apache Weex",
+              "link":"https://github.com/apache/incubator-weex"
             }
           ]
         }
@@ -75,7 +78,7 @@
           "link": "https://github.com/YorkShen/C4GEP",
           "items": [
             {
-              "description": "使用CUDA技术，并行化GEP算法。"
+              "description": "A GEP Algorithm based on CUDA"
             }
           ]
         },
@@ -84,7 +87,7 @@
           "link": "https://github.com/YorkShen/Resuuume",
           "items": [
             {
-              "description": "根据JSON数据，生成一份简历。"
+              "description": "A resume generator through which this page is built."
             }
           ]
         }
