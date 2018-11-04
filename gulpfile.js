@@ -1,20 +1,19 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var fs = require("fs");
+var fs = require("graceful-fs");
 var jade = require('gulp-jade');
 var data = require('gulp-data');
 var DOMParser = require('xmldom').DOMParser;
 var minifyInline = require('gulp-minify-inline');
 var htmlmin = require('gulp-htmlmin');
-var runSequence = require('run-sequence');
 var svgmin = require('gulp-svgmin');
 var del = require('del');
 
-gulp.task('clean', function () {
-    return del.sync('dist');
-});
+gulp.task('clean', gulp.series(function () {
+    return del('dist');
+}));
 
-gulp.task('jade', function () {
+gulp.task('jade', gulp.series(function () {
     return gulp.src('src/jade/index.jade')
         .pipe(data(function () {
             return JSON.parse(fs.readFileSync('resume.json'))
@@ -27,16 +26,16 @@ gulp.task('jade', function () {
         })).pipe(jade()).pipe(gulp.dest('dist')).pipe(browserSync.reload({
             stream: true
         }));
-});
+}));
 
-gulp.task('minify', function () {
+gulp.task('minify', gulp.series(function () {
     return gulp.src('dist/*.html')
         .pipe(minifyInline())
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist/'));
-});
+}));
 
-gulp.task('min-images', function () {
+gulp.task('min-images', gulp.series(function () {
     return gulp.src('src/res/*.svg')
         .pipe(svgmin({
             plugins: [{
@@ -44,28 +43,30 @@ gulp.task('min-images', function () {
             }]
         }))
         .pipe(gulp.dest('dist/res'));
-});
+}));
 
-gulp.task('build', function () {
-    return runSequence('min-images', 'jade', 'minify');
-});
+gulp.task('build', gulp.series('min-images', 'jade', 'minify'));
 
-gulp.task('full-build', function () {
-    return runSequence('clean', 'build')
-});
+gulp.task('default', gulp.series('clean', 'build'));
 
-gulp.task('default', ['full-build']);
+function reload(done) {
+    browserSync.reload();
+    done();
+}
 
-gulp.task('serve', function () {
-    return browserSync.init({
+function serve(done){
+    browserSync.init({
         server: {
             baseDir: 'dist',
             index: "index.html"
         }
-    })
-});
+    });
+    done();
+}
 
-gulp.task('server', ['serve'], function () {
-    runSequence('full-build');
-    gulp.watch(['src/**/*.+(jade|js|css|svg)', 'resume.json'], ['build']);
-});
+function watchfile(){
+    gulp.watch(['src/**/*.+(jade|js|css|svg)', 'resume.json'], gulp.series('build', reload));
+}
+
+
+gulp.task('dev', gulp.series('default', gulp.parallel(serve, watchfile)));

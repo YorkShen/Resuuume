@@ -38,6 +38,7 @@ html(lang="zh")
                         each list in section.content
                             .item
                                 a.sub_title(href=list.link)=list.sub_title
+                                .position=list.position
                                 each item in list.items
                                     .sub_item
                                         .hint=item.duration
