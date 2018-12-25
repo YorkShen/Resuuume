@@ -61,10 +61,6 @@
         {
           "items": [
             {
-              "product": "淘宝轻应用",
-              "description": "淘宝轻应用 Android 端负责人"
-            },
-            {
               "product": "Weex",
               "link": "https://github.com/apache/incubator-weex",
               "description": "Weex Android开发者，Weex Layout 作者，Weex Committer"
