@@ -36,11 +36,6 @@
           "position": "Android技术专家 P7",
           "items": [
             {
-              "product": "淘宝轻店铺",
-              "duration": "2018.08-至今",
-              "description": "淘宝轻应用Android端负责人"
-            },
-            {
               "product": "Weex",
               "duration": "2016.01-2018.08",
               "description": "Apache Weex 核心开发者，PPMC成员",
@@ -60,6 +55,10 @@
       "content": [
         {
           "items": [
+            {
+              "product": "淘宝轻应用",
+              "description": "淘宝轻应用 Android 端框架设计与开发"
+            },
             {
               "product": "Weex",
               "link": "https://github.com/apache/incubator-weex",
