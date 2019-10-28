@@ -46,7 +46,7 @@
             {
               "product": "Weex",
               "duration": "2016.01-至今",
-              "description": "Apache Weex 是一个移动端开发框架，该框架提供了使用 Web 技术开发 Navite App 的能力。目前 Weex 是淘宝前端框架的事实标准，并已输出到阿里集团的 20 余个 App 中，并在开源社区广泛使用。",
+              "description": "Apache Weex 是一个移动端开发框架，该框架提供了使用 Web 技术开发 Navite App 的能力。目前 Weex 是淘宝前端框架的事实标准，并在阿里经济体的20余个 App 及开源社区中广泛使用。",
               "link":"https://weex.apache.org/"
             },
             {
@@ -71,20 +71,7 @@
             {
               "product": "Weex",
               "link": "https://weex.apache.org/",
-              "description": "Apache Weex 开源社区负责人，Committer 与 PPMC 成员，主要负责 Java/C++ 层开发与开源社区的运营。"
-            },
-            {
-              "product": "Eagle",
-              "description": "Eagle 项目负责人"
-            }, 
-            {
-              "product": "淘宝轻应用",
-              "description": "淘宝轻应用 Android 端设计与开发"
-            },
-            {
-              "product": "Resuuume",
-              "link": "https://github.com/YorkShen/Resuuume",
-              "description": "简历生成器"
+              "description": "Apache Weex 开源社区负责人，Committer 与 PPMC 成员，负责 Java/C++ 层开发与开源社区的运营。"
             }
           ]
         }
