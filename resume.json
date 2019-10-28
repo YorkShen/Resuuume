@@ -1,14 +1,22 @@
 {
   "name": "申远",
-  "title": "Android工程师",
+  "title": "Android 工程师",
   "skills": [
     {
       "name": "Android",
       "score": "90%"
     },
     {
+      "name": "Java",
+      "score": "70%"
+    },
+    {
       "name": "C++",
       "score": "70%"
+    },
+    {
+      "name": "Python",
+      "score": "40%"
     },
     {
       "name": "Front-End",
@@ -33,18 +41,23 @@
       "content": [
         {
           "sub_title": "阿里巴巴集团",
-          "position": "Android技术专家 P7",
+          "position": "Android 技术专家(P7)",
           "items": [
             {
               "product": "Weex",
               "duration": "2016.01-至今",
-              "description": "Apache Weex 核心开发者，PPMC成员",
-              "link":"https://github.com/apache/incubator-weex"
+              "description": "Apache Weex 是一个移动端开发框架，该框架提供了使用 Web 技术开发 Navite App 的能力。目前 Weex 是淘宝前端框架的事实标准，并已输出到阿里集团的 20 余个 App 中，并在开源社区广泛使用。",
+              "link":"https://weex.apache.org/"
             },
             {
-              "product": "WindVane",
-              "duration": "2015.06-2015.11",
-              "description": "Windvane Android端开发者"
+              "product": "Eagle",
+              "duration": "2018.11-至今",
+              "description": "Eagle 是一个由淘宝技术部研发，使用C++编写，同时运行在 Android 和 iOS 客户端的轻量级 JS 引擎。"
+            },
+            {
+              "product": "淘宝小程序",
+              "duration": "2018.4-2018.11",
+              "description": "淘宝小程序是由淘宝技术部研发的小程序方案，并在阿里经济体内 20 余个 App 中被使用。"
             }
           ]
         }
@@ -56,14 +69,19 @@
         {
           "items": [
             {
-              "product": "淘宝轻应用",
-              "description": "淘宝轻应用 Android 端框架设计与开发"
+              "product": "Weex",
+              "link": "https://weex.apache.org/",
+              "description": "Apache Weex 开源社区负责人，Committer 与 PPMC 成员，主要负责 Java/C++ 层开发与开源社区的运营。"
             },
             {
-              "product": "Weex",
-              "link": "https://github.com/apache/incubator-weex",
-              "description": "Weex Android开发者，Weex Layout 作者，Weex Committer"
-            },{
+              "product": "Eagle",
+              "description": "Eagle 项目负责人"
+            }, 
+            {
+              "product": "淘宝轻应用",
+              "description": "淘宝轻应用 Android 端设计与开发"
+            },
+            {
               "product": "Resuuume",
               "link": "https://github.com/YorkShen/Resuuume",
               "description": "简历生成器"
@@ -76,20 +94,20 @@
       "title": "教育背景",
       "content": [
         {
-          "sub_title": "福建师范大学",
-          "items": [
-            {
-              "duration": "2010.09-2014.06",
-              "description": "软件工程，本科"
-            }
-          ]
-        },
-        {
           "sub_title": "香港城市大学",
           "items": [
             {
               "duration": "2014.09-2015.11",
               "description": "计算机科学，硕士"
+            }
+          ]
+        },
+        {
+          "sub_title": "福建师范大学",
+          "items": [
+            {
+              "duration": "2010.09-2014.06",
+              "description": "软件工程，本科"
             }
           ]
         }
