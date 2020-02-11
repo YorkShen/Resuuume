@@ -16,7 +16,7 @@ gulp.task('clean', gulp.series(function () {
 gulp.task('pug', gulp.series(function () {
     return gulp.src('src/jade/index.pug')
         .pipe(data(function () {
-            return JSON.parse(fs.readFileSync('resume.json'))
+            return JSON.parse(fs.readFileSync('resume-chi.json'))
         })).pipe(data(function () {
             var mark = new DOMParser().parseFromString(fs.readFileSync('dist/res/mark.svg').toString(), 'text/xml');
             return {
@@ -65,7 +65,7 @@ function serve(done){
 }
 
 function watchfile(){
-    gulp.watch(['src/**/*.+(jade|js|css|svg)', 'resume.json'], gulp.series('build', reload));
+    gulp.watch(['src/**/*.+(jade|js|css|svg)', 'resume-chi.json'], gulp.series('build', reload));
 }
 
 

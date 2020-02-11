@@ -1,0 +1,105 @@
+{
+    "name": "York Shen",
+    "title": "Android Engineer",
+    "skills": [
+      {
+        "name": "Android",
+        "score": "90%"
+      },
+      {
+        "name": "Java",
+        "score": "70%"
+      },
+      {
+        "name": "C++",
+        "score": "70%"
+      },
+      {
+        "name": "Python",
+        "score": "40%"
+      },
+      {
+        "name": "Front-End",
+        "score": "40%"
+      }
+    ],
+    "communication": [
+      {
+        "icon": "email.svg",
+        "info": "shenyuancs@gmail.com",
+        "link": "mailto:shenyuancs@gmail.com"
+      },
+      {
+        "icon": "github.svg",
+        "info": "github.com/YorkShen",
+        "link": "https://github.com/YorkShen"
+      }
+    ],
+    "biography": [
+      {
+        "title": "Working Experience",
+        "content": [
+          {
+            "sub_title": "Alibaba Group",
+            "position": "Senior Engineer in Android (P7)",
+            "items": [
+              {
+                "product": "Weex",
+                "duration": "2016.01 to now",
+                "description": "Apache Weex (https://weex.apache.org/) is a mobile development framework，which provides the abliity of developing mobile Apps with front-end stack. It's widely used in Alibaba and open source community.",
+                "link":"https://weex.apache.org/"
+              },
+              {
+                "product": "Eagle",
+                "duration": "2018.11 to 2019.12",
+                "description": "Eagle is a domain-specifiy JavaScript interpreter, which aims at speeding up the exeuting of Vue.js. Eagle is written in C++ while run both on Android and iOS."
+              },
+              {
+                "product": "Taobao MiniApp",
+                "duration": "2018.4-2018.11",
+                "description": "Taobao MiniApp is a cross platform mobile development framework, which is an early implementation of W3C MiniApp Standardization White Paper (http://bit.ly/2ShoF5F)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Project",
+        "content": [
+          {
+            "items": [
+              {
+                "product": "Apache Weex",
+                "link": "https://weex.apache.org/",
+                "description": "I am a PPMC and Committer of Apache Weex. I focus on Java and C++ developemnt, also consistently building the open source community."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Education",
+        "content": [
+          {
+            "sub_title": "The City University of Hong Kong",
+            "items": [
+              {
+                "duration": "2014.09 to 2015.11",
+                "description": "Computer Science，Master's Degree"
+              }
+            ]
+          },
+          {
+            "sub_title": "FuJian Normal University",
+            "items": [
+              {
+                "duration": "2010.09 to 2014.06",
+                "description": "Software Engineer，Bachelor's Degree"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
